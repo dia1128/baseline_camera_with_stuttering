@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 0.42.0">
+  <meta name="description" content="camera_app API docs, for the Dart programming language.">
+  <title>camera_app - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  
+</head>
+
+
+<body data-base-href=""
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li class="self-crumb">camera_app package</li>
+  </ol>
+  <div class="self-name">camera_app</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li class="self-crumb">camera_app package</li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">camera_app</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="actions_action_catalog/actions_action_catalog-library.html">action_catalog</a></li>
+      <li><a href="actions_action_list/actions_action_list-library.html">action_list</a></li>
+      <li><a href="amplifyconfiguration/amplifyconfiguration-library.html">amplifyconfiguration</a></li>
+      <li><a href="app_navigator/app_navigator-library.html">app_navigator</a></li>
+      <li><a href="auth_auth_credentials/auth_auth_credentials-library.html">auth_credentials</a></li>
+      <li><a href="auth_auth_cubit/auth_auth_cubit-library.html">auth_cubit</a></li>
+      <li><a href="auth_auth_navigator/auth_auth_navigator-library.html">auth_navigator</a></li>
+      <li><a href="auth_auth_repository/auth_auth_repository-library.html">auth_repository</a></li>
+      <li><a href="camera_cubit/camera_cubit-library.html">camera_cubit</a></li>
+      <li><a href="camera_example_home/camera_example_home-library.html">camera_example_home</a></li>
+      <li><a href="camera_navigator/camera_navigator-library.html">camera_navigator</a></li>
+      <li><a href="camera_view_build/camera_view_build-library.html">camera_view_build</a></li>
+      <li><a href="models_cart_model/models_cart_model-library.html">cart_model</a></li>
+      <li><a href="models_catalog_model/models_catalog_model-library.html">catalog_model</a></li>
+      <li><a href="auth_confirm_confirmation_bloc/auth_confirm_confirmation_bloc-library.html">confirmation_bloc</a></li>
+      <li><a href="auth_confirm_confirmation_state/auth_confirm_confirmation_state-library.html">confirmation_state</a></li>
+      <li><a href="auth_confirm_confirmation_view/auth_confirm_confirmation_view-library.html">confirmation_view</a></li>
+      <li><a href="actions_edit_action/actions_edit_action-library.html">edit_action</a></li>
+      <li><a href="auth_form_submission_status/auth_form_submission_status-library.html">form_submission_status</a></li>
+      <li><a href="loading_view/loading_view-library.html">loading_view</a></li>
+      <li><a href="auth_login_login_bloc/auth_login_login_bloc-library.html">login_bloc</a></li>
+      <li><a href="auth_login_login_state/auth_login_login_state-library.html">login_state</a></li>
+      <li><a href="auth_login_login_view/auth_login_login_view-library.html">login_view</a></li>
+      <li><a href="main/main-library.html">main</a></li>
+      <li><a href="session_cubit/session_cubit-library.html">session_cubit</a></li>
+      <li><a href="session_state/session_state-library.html">session_state</a></li>
+      <li><a href="auth_sign_up_sign_up_bloc/auth_sign_up_sign_up_bloc-library.html">sign_up_bloc</a></li>
+      <li><a href="auth_sign_up_sign_up_state/auth_sign_up_sign_up_state-library.html">sign_up_state</a></li>
+      <li><a href="auth_sign_up_sign_up_view/auth_sign_up_sign_up_view-library.html">sign_up_view</a></li>
+      <li><a href="storage_repository/storage_repository-library.html">storage_repository</a></li>
+      <li><a href="models_user/models_user-library.html">user</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="camera_app">camera_app</h1>
+<p>Steps to install.</p>
+<ul>
+<li>
+<p>Download VSCode. xCode and Android Studio 2019.</p>
+</li>
+<li>
+<p>Install Flutter and Dart.
+<a href="https://flutter.dev/docs/get-started/install">https://flutter.dev/docs/get-started/install</a></p>
+</li>
+<li>
+<p>Install the flutter plugin in android studio</p>
+</li>
+<li>
+<p>Install Git</p>
+</li>
+<li>
+<p>Install cocoapods</p>
+</li>
+<li>
+<p>Install emulator for android device on Visual Studio (for emulator testing).</p>
+</li>
+<li>
+<p>Install ios device emulator on xcode.
+NOTE: Camera does not work on ios emulator. Emulator does not have that capability.</p>
+</li>
+<li>
+<p>Check Flutter doctor to make sure everything is installed.</p>
+</li>
+<li>
+<p>Running it on a physical device (ios)
+<a href="https://flutter.dev/docs/get-started/install/macos">https://flutter.dev/docs/get-started/install/macos</a>
+  <a href="https://www.youtube.com/watch?v=Jn7o4Gy3F7Q&amp;t=197s">https://www.youtube.com/watch?v=Jn7o4Gy3F7Q&amp;t=197s</a></p>
+</li>
+<li>
+<p>"pod install" in the ios directory.</p>
+</li>
+<li>
+<p>Install amplify cli
+"curl -sL <a href="https://aws-amplify.github.io/amplify-cli/install">https://aws-amplify.github.io/amplify-cli/install</a> | bash &amp;&amp; $SHELL"</p>
+</li>
+<li>
+<p>Submit to app store
+<a href="https://www.youtube.com/watch?v=YPLs3xrDcm0">https://www.youtube.com/watch?v=YPLs3xrDcm0</a></p>
+</li>
+</ul>
+<p>Steps to Connect to another backend.</p>
+<ul>
+<li>Run "amplify delete" to remove all connections with current backend</li>
+<li>Setup new backend on AWS</li>
+<li>Install API, DataStore, and Auth in that order</li>
+<li>Auth should be installed last</li>
+</ul>
+<p>To run and build on a device: Android</p>
+<ul>
+<li>run "flutter pub get" in the root directory to get all the necessary dependencies</li>
+<li>Copy the amplify configuration file from the lib folder on the current machine and put it on the new machine</li>
+<li>run "flutter run" to build the debug version for the connected device
+You can run "flutter run --release" to build the release version of the app on the connected device</li>
+<li>Alternatively you can run inside android studio by clicking the play button in the top bar</li>
+<li>You can use features such as hot reloading when running the app on a device. Cmd + s will save any changes 
+you made and reload the app display without having to rerun the app.</li>
+</ul>
+<p>To run and build on a device: Iphone</p>
+<ul>
+<li>run "flutter pub get" in the root directory to get all the necessary dependencies</li>
+<li>Copy the amplify configuration file from the lib folder on the current machine and put it on the new machine</li>
+<li>Right click your project in Android studio and go to Flutter-&gt;Open IOS Module in Xcode</li>
+<li>Go to Runner-&gt;Targets-&gt;Signing and Capabilities and select the AILA lab account under "Team"
+If that is not an option, choose add an acount and sign in with the lab account. 
+Add a apple development certificate for your computer by clicking the + and choosing apple development</li>
+<li>Run the app through Xcode first to make sure everything is working, then you can run it throuhg Android Studio</li>
+<li>You can use features such as hot reloading when running the app on a device. Cmd + s will save any changes 
+you made and reload the app display without having to rerun the app.</li>
+</ul>
+<p>To build a release for the IOS app store</p>
+<ul>
+<li>See <a href="https://flutter.dev/docs/deployment/ios">https://flutter.dev/docs/deployment/ios</a> for in depth documentation about submitting to the appstore</li>
+<li>Open project in xcode</li>
+<li>Check modify the version number/build number for the release in Runner-&gt;Targets-&gt;General</li>
+<li>In Signining and Capabilities, make sure the AILA lab development account is selected
+If not, follow the instructions above to sign into the account</li>
+<li>Go to Product-&gt;Archive, this will build the file for app store connect</li>
+<li>When the archive is finished, click on distrubute app. This will upload the archive to app store connect
+If this fails because you don't have the signing certificate, copy it from this machine. The certificate
+is currently located in the home directory.</li>
+<li>Go to appstore connect to submit the new build</li>
+</ul>
+<p>To build a release for the google play store</p>
+<ul>
+<li>See <a href="https://flutter.dev/docs/deployment/android">https://flutter.dev/docs/deployment/android</a> for in depth documentation about submitting to the google play store</li>
+<li>Commit project to github repository</li>
+<li>Go to release workstation and pull the changes</li>
+<li>run "flutter build appbundle" this creates the bundle file
+The keystore file for signing should already be on both machines. On the macbook it is located in the home folder
+If you want to build the release on a new machine you need to transfer this keystore file to that machine.
+Then configure the location of that file in the key.properties. See "Reference the keystore from the app" in the flutter documentation</li>
+<li>Sign into the google play console with the lab account and choose the app</li>
+<li>Go to the production tab and choose create new release</li>
+<li>Upload the bundle file from <code>project</code>/build/app/outputs/bundle/release/app.aab</li>
+<li>Submit the release</li>
+</ul>
+<p>Troubleshooting : Error when building ios in Xcode
+If you're sure you followed the steps correctly you may need to clean your workspace</p>
+<ul>
+<li>Run "flutter clean"</li>
+<li>If that doesn't work, run "flutter pub get"</li>
+<li>Run "pod install" in ios directory</li>
+</ul>
+<p>Troubleshooting: Iproxy cannot be verified</p>
+<ul>
+<li>Navigate to the directory containing the flutter SDK</li>
+<li>Run "sudo xattr -d com.apple.quarantine flutter/bin/cache/artifacts/usbmuxd/iproxy"</li>
+</ul>
+<p>Troubleshooting: pod install does not work</p>
+<ul>
+<li>Delete Podfile and Podfile.lock from ios folder and run "flutter build ios" in project folder</li>
+</ul>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="action_catalog">
+  <span class="name"><a href="actions_action_catalog/actions_action_catalog-library.html">action_catalog</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="action_list">
+  <span class="name"><a href="actions_action_list/actions_action_list-library.html">action_list</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="amplifyconfiguration">
+  <span class="name"><a href="amplifyconfiguration/amplifyconfiguration-library.html">amplifyconfiguration</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="app_navigator">
+  <span class="name"><a href="app_navigator/app_navigator-library.html">app_navigator</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="auth_credentials">
+  <span class="name"><a href="auth_auth_credentials/auth_auth_credentials-library.html">auth_credentials</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="auth_cubit">
+  <span class="name"><a href="auth_auth_cubit/auth_auth_cubit-library.html">auth_cubit</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="auth_navigator">
+  <span class="name"><a href="auth_auth_navigator/auth_auth_navigator-library.html">auth_navigator</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="auth_repository">
+  <span class="name"><a href="auth_auth_repository/auth_auth_repository-library.html">auth_repository</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="camera_cubit">
+  <span class="name"><a href="camera_cubit/camera_cubit-library.html">camera_cubit</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="camera_example_home">
+  <span class="name"><a href="camera_example_home/camera_example_home-library.html">camera_example_home</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="camera_navigator">
+  <span class="name"><a href="camera_navigator/camera_navigator-library.html">camera_navigator</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="camera_view_build">
+  <span class="name"><a href="camera_view_build/camera_view_build-library.html">camera_view_build</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="cart_model">
+  <span class="name"><a href="models_cart_model/models_cart_model-library.html">cart_model</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="catalog_model">
+  <span class="name"><a href="models_catalog_model/models_catalog_model-library.html">catalog_model</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="confirmation_bloc">
+  <span class="name"><a href="auth_confirm_confirmation_bloc/auth_confirm_confirmation_bloc-library.html">confirmation_bloc</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="confirmation_state">
+  <span class="name"><a href="auth_confirm_confirmation_state/auth_confirm_confirmation_state-library.html">confirmation_state</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="confirmation_view">
+  <span class="name"><a href="auth_confirm_confirmation_view/auth_confirm_confirmation_view-library.html">confirmation_view</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="edit_action">
+  <span class="name"><a href="actions_edit_action/actions_edit_action-library.html">edit_action</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="form_submission_status">
+  <span class="name"><a href="auth_form_submission_status/auth_form_submission_status-library.html">form_submission_status</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="loading_view">
+  <span class="name"><a href="loading_view/loading_view-library.html">loading_view</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="login_bloc">
+  <span class="name"><a href="auth_login_login_bloc/auth_login_login_bloc-library.html">login_bloc</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="login_state">
+  <span class="name"><a href="auth_login_login_state/auth_login_login_state-library.html">login_state</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="login_view">
+  <span class="name"><a href="auth_login_login_view/auth_login_login_view-library.html">login_view</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="main">
+  <span class="name"><a href="main/main-library.html">main</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="session_cubit">
+  <span class="name"><a href="session_cubit/session_cubit-library.html">session_cubit</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="session_state">
+  <span class="name"><a href="session_state/session_state-library.html">session_state</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="sign_up_bloc">
+  <span class="name"><a href="auth_sign_up_sign_up_bloc/auth_sign_up_sign_up_bloc-library.html">sign_up_bloc</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="sign_up_state">
+  <span class="name"><a href="auth_sign_up_sign_up_state/auth_sign_up_sign_up_state-library.html">sign_up_state</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="sign_up_view">
+  <span class="name"><a href="auth_sign_up_sign_up_view/auth_sign_up_sign_up_view-library.html">sign_up_view</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="storage_repository">
+  <span class="name"><a href="storage_repository/storage_repository-library.html">storage_repository</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="user">
+  <span class="name"><a href="models_user/models_user-library.html">user</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    camera_app
+      1.0.0+2
+  </span>
+
+  
+</footer>
+
+
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+
+</body>
+
+</html>
+

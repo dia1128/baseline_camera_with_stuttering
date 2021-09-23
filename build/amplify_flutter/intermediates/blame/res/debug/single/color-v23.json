@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_flutter/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/d8e69336e21c6a428e8a9e9d99518477/appcompat-1.0.0/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_flutter/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/d8e69336e21c6a428e8a9e9d99518477/appcompat-1.0.0/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_flutter/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/d8e69336e21c6a428e8a9e9d99518477/appcompat-1.0.0/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_flutter/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/d8e69336e21c6a428e8a9e9d99518477/appcompat-1.0.0/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_flutter/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/d8e69336e21c6a428e8a9e9d99518477/appcompat-1.0.0/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_flutter/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/d8e69336e21c6a428e8a9e9d99518477/appcompat-1.0.0/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_flutter/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/d8e69336e21c6a428e8a9e9d99518477/appcompat-1.0.0/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_flutter/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_flutter/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/d8e69336e21c6a428e8a9e9d99518477/appcompat-1.0.0/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_flutter/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/d8e69336e21c6a428e8a9e9d99518477/appcompat-1.0.0/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    }
+]

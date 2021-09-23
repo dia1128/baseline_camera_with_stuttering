@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_flutter/intermediates/res/merged/debug/interpolator-v21/mtrl_fast_out_slow_in.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/interpolator-v21/mtrl_fast_out_slow_in.xml"
+    },
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_flutter/intermediates/res/merged/debug/interpolator-v21/mtrl_linear_out_slow_in.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/interpolator-v21/mtrl_linear_out_slow_in.xml"
+    },
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_flutter/intermediates/res/merged/debug/interpolator-v21/mtrl_fast_out_linear_in.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/interpolator-v21/mtrl_fast_out_linear_in.xml"
+    }
+]

@@ -1,0 +1,1 @@
+[{"outputType":{"type":"MERGED_MANIFESTS"},"apkData":{"type":"MAIN","splits":[],"versionCode":-1,"enabled":true,"outputFile":"amplify_storage_s3-release.aar","fullName":"release","baseName":"release"},"path":"../../library_manifest/release/AndroidManifest.xml","properties":{"packageId":"com.amazonaws.amplify.amplify_storage_s3","split":""}}]

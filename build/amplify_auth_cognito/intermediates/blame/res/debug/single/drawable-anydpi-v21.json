@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_auth_cognito/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/drawable-anydpi-v21/design_ic_visibility.xml"
+    },
+    {
+        "merged": "/Users/admin/Desktop/Projects/secureAILab/baseline-camera-app/build/amplify_auth_cognito/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
+        "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+    }
+]

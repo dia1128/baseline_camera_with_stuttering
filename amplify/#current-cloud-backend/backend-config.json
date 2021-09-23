@@ -1,0 +1,16 @@
+{
+  "auth": {
+    "baselinecameraappa891db65": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
+  "storage": {
+    "s371e3c9cf": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
+  }
+}

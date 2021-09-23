@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-baselinecameraapp-dev-144250-authRole",
+      "UnauthRoleArn": "arn:aws:iam::964108242354:role/amplify-baselinecameraapp-dev-144250-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::964108242354:role/amplify-baselinecameraapp-dev-144250-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-baselinecameraapp-dev-144250-deployment",
+      "UnauthRoleName": "amplify-baselinecameraapp-dev-144250-unauthRole",
+      "StackName": "amplify-baselinecameraapp-dev-144250",
+      "StackId": "arn:aws:cloudformation:us-east-2:964108242354:stack/amplify-baselinecameraapp-dev-144250/140691e0-1bdd-11ec-b2f2-02822ed64676",
+      "AmplifyAppId": "d2ktg3l4q6st8w"
+    },
+    "categories": {
+      "auth": {
+        "baselinecameraappa891db65": {}
+      }
+    }
+  }
+}
