@@ -5,11 +5,14 @@ import 'package:amplify_flutter/amplify.dart';
 import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 import 'package:camera/camera.dart';
 import 'package:camera_app/camera_view_build.dart';
+import 'package:camera_app/stuttering/survey.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:platform_device_id/platform_device_id.dart';
 
 import '../main.dart';
-
+import 'dart:convert' show utf8;
+import 'package:csv/csv.dart';
 
 class ReadPassage extends StatefulWidget {
   ReadPassage({this.title});
@@ -19,22 +22,12 @@ class ReadPassage extends StatefulWidget {
 
 
 
+
   @override
   _ReadPassageState createState() => _ReadPassageState();
 }
 
 
-/// A wrapper class that wraps the upload file boolean variables
-class BooleanWrap {
-  BooleanWrap(bool a, bool b, bool c) {
-    this.finished = a;
-    this.started = b;
-    this.upload = c;
-  }
-  bool finished;
-  bool started;
-  bool upload;
-}
 
 
 class _ReadPassageState extends State<ReadPassage> {
@@ -46,6 +39,7 @@ class _ReadPassageState extends State<ReadPassage> {
   BooleanWrap isFileFinishedUploading;
   bool enableAudio = true;
   String uploadMessage;
+  bool enableVideo = false;
 
 
 
@@ -86,7 +80,7 @@ class _ReadPassageState extends State<ReadPassage> {
     }
     return null;
   }
- ///Widget for camera options
+  ///Widget for camera options
   Widget captureControlRowWidget() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -103,9 +97,13 @@ class _ReadPassageState extends State<ReadPassage> {
                   controller.value.isInitialized &&
                   !controller.value.isRecordingVideo
 
-                      // only if finished uploading
+              // only if finished uploading
               ) if (await isInternetConnected())
+              {
                 onStartPressed();
+
+              }
+
               else
                 showInSnackBar("You are not connected to the internet");
             }),
@@ -117,14 +115,14 @@ class _ReadPassageState extends State<ReadPassage> {
           // If all boolean values are true, activate button otherwise do nothing
           onPressed:
 
-                controller != null &&
-                controller.value.isInitialized &&
-                controller.value.isRecordingVideo
-                ? (controller != null && controller.value.isRecordingPaused
-                ? onResumeButtonPressed
-                : onPauseButtonPressed)
-        : null,
-    ),
+          controller != null &&
+              controller.value.isInitialized &&
+              controller.value.isRecordingVideo
+              ? (controller != null && controller.value.isRecordingPaused
+              ? onResumeButtonPressed
+              : onPauseButtonPressed)
+              : null,
+        ),
         IconButton(
           icon: const Icon(Icons.stop),
           color: Colors.red,
@@ -147,31 +145,41 @@ class _ReadPassageState extends State<ReadPassage> {
 
     return Scaffold(
       //body: Padding(
-        //padding: const EdgeInsets.only(top: 40, bottom: 10),
-        body: Column(
-          children: <Widget>[
-            Expanded(
-                flex: 1,
-                child: Container(
-                  height :MediaQuery.of(context).size.height,width:MediaQuery.of(context).size.width,
-                  //padding: EdgeInsets.all(80),
-                  margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*.08,
-                                          bottom:MediaQuery.of(context).size.height*.01,
-                                          left: MediaQuery.of(context).size.height*.02,
-                                          right: MediaQuery.of(context).size.height*.02
-                    ),
-                  color: Colors.blueGrey[100],
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.vertical,
+      //padding: const EdgeInsets.only(top: 40, bottom: 10),
+      body: Column(
+        children: <Widget>[
+          Expanded(
+              flex: 1,
+              child: Container(
+                height :MediaQuery.of(context).size.height,width:MediaQuery.of(context).size.width,
+                //padding: EdgeInsets.all(80),
+                margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*.04,
+                    bottom:MediaQuery.of(context).size.height*.01,
+                    left: MediaQuery.of(context).size.height*.01,
+                    right: MediaQuery.of(context).size.height*.01
+                ),
+                decoration: BoxDecoration(
+
+                    border: Border.all(color: enableVideo == true ? Colors.red: Colors.white, width:4),
+                    color: Colors.white
+
+                ),
+                //color: Colors.white,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Container(
+                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                     child: Text(
                       sessionText.toString(),
-                      style: TextStyle(fontSize: 25, backgroundColor: Colors.blue),
+                      style: TextStyle(fontSize: 20),
+                      textAlign: TextAlign.left,
                     ),
                   ),
-                )
-            ),
-            Center(
-              child: Padding(
+                ),
+              )
+          ),
+          Center(
+            child: Padding(
                 padding: const EdgeInsets.only(bottom: 20),
                 // child: ElevatedButton(
                 //   style: ButtonStyle(
@@ -188,15 +196,16 @@ class _ReadPassageState extends State<ReadPassage> {
                 //   //child: Text("Recording")
                 // ),
                 child: captureControlRowWidget()
-              ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
+      ),
     );
   }
 
   Future<void> onStartPressed() async {
     // Creates the file path where the video is to be saved
+    enableVideo = true;
     final Directory extDir = await getApplicationDocumentsDirectory();
     final String dirPath = '${extDir.path}/Movies/flutter_test';
     await Directory(dirPath).create(recursive: true);
@@ -280,28 +289,75 @@ class _ReadPassageState extends State<ReadPassage> {
 
   ///Strops the video and uploaeds file
   Future<void> onStopPressed() async {
+    enableVideo =false;
     await controller.stopVideoRecording();
     setState(() {});
-    String date = DateTime.now().toIso8601String();
+    String date = DateTime.now().toIso8601String().substring(0, 19);
     print("onStopPressed()");
+    String deviceId = await PlatformDeviceId.getDeviceId;
+    print(deviceId.toString());
     try {
       final result = await Amplify.Storage.uploadFile(
 
         local: File(filePath),
-        key: '$date.mp4',
+        key: '$deviceId/Stuttering/${deviceId}_' + '$date.mp4',
       );
       print('Successfully uploaded file: ${result.key}');
     } on StorageException catch (e) {
       print('Error uploading file: $e');
     }
-      // Navigator.push(
-      //     context,
-      //     MaterialPageRoute(builder: (context) => Survey ()));
+    var data = await downloadProtected() as List;
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context,) => Survey(questions: data.toList()), //list is forwarded to the next screen
+        ));
+  }
+
+
+
+  ///Download files from aws, create a temporary csv file
+  ///create a list from the file and return the list
+
+  Future downloadProtected() async {
+    // Create a file to store downloaded contents
+    final documentsDir = await getApplicationDocumentsDirectory();
+    final filepath = documentsDir.path + '/example.csv';
+    final file = File(filepath);
+    List fields = [];
+
+
+    // Set access level and Cognito Identity ID.
+    // Note: `targetIdentityId` is only needed when downloading
+    // protected files of a user other than the one currently
+    // logged in.
+    final downloadOptions = S3DownloadFileOptions(
+      accessLevel: StorageAccessLevel.guest,
+    );
+
+    // Download gues file and read contents
+    try {
+      await Amplify.Storage.downloadFile(
+        key: 'questions.csv',
+        local: file,
+        options: downloadOptions,
+      );
+
+      final input = file.openRead();
+      fields = await input.transform(utf8.decoder).transform(new CsvToListConverter()).toList();
+
+      //print("List"+ fields.toString());
+      return fields;
+
+    } on StorageException catch (e) {
+      print('Error downloading protected file: $e');
     }
 
-
-
-
   }
+
+
+
+
+}
 
 

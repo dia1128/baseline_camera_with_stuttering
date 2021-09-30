@@ -77,6 +77,8 @@ PODS:
   - ObjectMapper (4.2.0)
   - path_provider (0.0.1):
     - Flutter
+  - platform_device_id (0.0.1):
+    - Flutter
   - sqflite (0.0.2):
     - Flutter
     - FMDB (>= 2.7.5)
@@ -100,6 +102,7 @@ DEPENDENCIES:
   - gallery_saver (from `.symlinks/plugins/gallery_saver/ios`)
   - location (from `.symlinks/plugins/location/ios`)
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
+  - platform_device_id (from `.symlinks/plugins/platform_device_id/ios`)
   - sqflite (from `.symlinks/plugins/sqflite/ios`)
   - video_player (from `.symlinks/plugins/video_player/ios`)
 
@@ -145,6 +148,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/location/ios"
   path_provider:
     :path: ".symlinks/plugins/path_provider/ios"
+  platform_device_id:
+    :path: ".symlinks/plugins/platform_device_id/ios"
   sqflite:
     :path: ".symlinks/plugins/sqflite/ios"
   video_player:
@@ -166,19 +171,20 @@ SPEC CHECKSUMS:
   AWSPluginsCore: 744703798503e07230cc64b67b1f7ff0569e06e9
   AWSS3: 1782d0db43a1219a118ea6263d4ea01f76f8cdf4
   camera: a0ca5080336f7af47b88436e5e26da3dee5568f0
-  device_info: cbf09d2ec12aa7110e0b09fabe54b5bd6c8efe74
+  device_info: d7d233b645a32c40dfdc212de5cf646ca482f175
   esys_flutter_share: 403498dab005b36ce1f8d7aff377e81f0621b0b4
-  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
   flutter_secure_storage: 7953c38a04c3fdbb00571bcd87d8e3b5ceb9daec
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   gallery_saver: 9fc173c9f4fcc48af53b2a9ebea1b643255be542
   location: 3a2eed4dd2fab25e7b7baf2a9efefe82b512d740
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
+  platform_device_id: 81b3e2993881f87d0c82ef151dc274df4869aef5
   sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   video_player: 69c5f029fac4ffe4fc8a85ea7f7b793709661549
 
 PODFILE CHECKSUM: 775997f741c536251164e3eacf6e34abf2eb7a17
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2
