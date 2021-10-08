@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_core/intermediates/res/merged/debug/values-fr/values-fr.xml",
+            "outputFile": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_core/intermediates/res/merged/debug/values-fr/values-fr.xml",
             "map": [
                 {
                     "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/d8e69336e21c6a428e8a9e9d99518477/appcompat-1.0.0/res/values-fr/values-fr.xml",
@@ -74,7 +74,7 @@
             ]
         },
         {
-            "outputFile": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_core/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
+            "outputFile": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_core/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
             "map": [
                 {
                     "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/d8e69336e21c6a428e8a9e9d99518477/appcompat-1.0.0/res/values-fr/values-fr.xml",

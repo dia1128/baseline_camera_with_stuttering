@@ -15,9 +15,10 @@ import 'dart:convert' show utf8;
 import 'package:csv/csv.dart';
 
 class ReadPassage extends StatefulWidget {
-  ReadPassage({this.title});
+  ReadPassage({this.title,this.deviceID});
 
   String title = "Read Passage";
+  String deviceID;
 
 
 
@@ -294,18 +295,17 @@ class _ReadPassageState extends State<ReadPassage> {
     setState(() {});
     String date = DateTime.now().toIso8601String().substring(0, 19);
     print("onStopPressed()");
-    String deviceId = await PlatformDeviceId.getDeviceId;
-    print(deviceId.toString());
-    try {
-      final result = await Amplify.Storage.uploadFile(
-
-        local: File(filePath),
-        key: '$deviceId/Stuttering/${deviceId}_' + '$date.mp4',
-      );
-      print('Successfully uploaded file: ${result.key}');
-    } on StorageException catch (e) {
-      print('Error uploading file: $e');
-    }
+    //
+    // try {
+    //   final result = await Amplify.Storage.uploadFile(
+    //
+    //     local: File(filePath),
+    //     key: '${widget.deviceID}/Stuttering/${widget.deviceID}_' + '$date.mp4',
+    //   );
+    //   print('Successfully uploaded file: ${result.key}');
+    // } on StorageException catch (e) {
+    //   print('Error uploading file: $e');
+    // }
     var data = await downloadProtected() as List;
     Navigator.push(
         context,

@@ -1,14 +1,25 @@
 
+import 'dart:convert' show utf8;
+import 'dart:async';
+import 'dart:io';
+
+import 'package:amplify_flutter/amplify.dart';
+import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 import 'package:camera_app/stuttering/passage.dart';
+import 'package:camera_app/stuttering/survey.dart';
+import 'package:csv/csv.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:intl/intl.dart';
+import 'package:path/path.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:platform_device_id/platform_device_id.dart';
 
 import '../camera_navigator.dart';
 import '../main.dart';
+import 'background_questions.dart';
 
 class HomeNavigation extends StatelessWidget {
-
-  //
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +36,40 @@ class HomeNavigation extends StatelessWidget {
                         margin: const EdgeInsets.only(top:200,bottom:100),
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(primary: Colors.teal),
-                            onPressed: () {
+                            onPressed: () async{
 
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => ReadPassage())
-                              );
+                              String id;
+                              bool check;
+
+                                getID().then((value){
+                                  id = value.toString(); //This is how we store a future returned value. That is the device ID here.
+                                  print("Device ID: " + id.toString());
+
+                                });
+                                print(getID.toString());
+                              getURL().then((directory){ //get S3 directory named on device name
+                                print("Existing Devices:" + directory.toString());
+                                check = directory.contains(id);
+                                print("Check " + check.toString());
+
+                                ///if device id already exists as a directory name in s3 we users will go to passage reading screen directly
+                                ///Otherwise a background questioner will prompt in a new new screen
+
+                                if(directory.contains(id) == true){
+                                  Navigator.push(
+
+                                      context,
+                                      MaterialPageRoute(builder: (context) => ReadPassage(deviceID: id,))
+                                  );
+                                }
+                                else{
+                                  Navigator.push(
+
+                                      context,
+                                      MaterialPageRoute(builder: (context) => SurveyNew ())
+                                  );
+                                }
+                              });
                             },
                               child: Text("Read Passage")
 
@@ -56,5 +95,35 @@ class HomeNavigation extends StatelessWidget {
         ),
       ),
     );
+  }
+  ///Collecting the folder name
+  ///All unique name with one extra file of questions which doesn't matter
+
+  static Future<List<String>> getURL() async {
+    List<String> objects = [];
+    try {
+      final ListResult result = await Amplify.Storage.list();
+      String folder;
+      //final documentDir = await getApplicationDocumentsDirectory();
+      result.items.forEach((element) {
+
+        folder = element.key.toString().split("/").first;
+        if(objects.contains(folder) == false)
+           objects.add(folder.toString());
+    });
+
+      return objects;
+    } on StorageException catch (e) {
+      print('Error listing items: $e');
+    }
+  }
+
+  ///Collecting device ID
+  Future<String> getID() async {
+
+    String deviceId = await PlatformDeviceId.getDeviceId;
+
+    return deviceId.toString();
+
   }
 }

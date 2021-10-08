@@ -12,20 +12,20 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:8:9-87
-14-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:8:26-68
+14-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:8:9-87
+14-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:8:26-68
 15    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-15-->[:location] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
-15-->[:location] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-78
+15-->[:location] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
+15-->[:location] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-78
 16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-16-->[:location] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-79
-16-->[:location] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-76
+16-->[:location] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-79
+16-->[:location] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-76
 17    <uses-permission android:name="android.permission.CAMERA" />
-17-->[:camera] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-65
-17-->[:camera] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-62
+17-->[:camera] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-65
+17-->[:camera] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-62
 18    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-18-->[:camera] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-71
-18-->[:camera] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-68
+18-->[:camera] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-71
+18-->[:camera] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/camera/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-68
 19    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 19-->[com.amplifyframework:aws-storage-s3:1.16.13] /Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/5656feb94cf2bef02a700bfcddf1f2d1/aws-storage-s3-1.16.13/AndroidManifest.xml:25:5-81
 19-->[com.amplifyframework:aws-storage-s3:1.16.13] /Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/5656feb94cf2bef02a700bfcddf1f2d1/aws-storage-s3-1.16.13/AndroidManifest.xml:25:22-78
@@ -38,60 +38,60 @@
 22-->[com.google.android.play:core:1.7.2] /Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/1d4e03f272838efc82d9e7d0a10fe4f1/core-1.7.2/AndroidManifest.xml:8:20-72
 23
 24    <application
-24-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:9:5-41:19
+24-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:9:5-41:19
 25        android:name="io.flutter.app.FlutterApplication"
-25-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:10:9-57
+25-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:10:9-57
 26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 26-->[androidx.core:core:1.3.2] /Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/acf999d338d007d1e88d450cb8e478ac/core-1.3.2/AndroidManifest.xml:24:18-86
 27        android:debuggable="true"
 28        android:icon="@mipmap/launcher_icon"
-28-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:12:9-45
+28-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:12:9-45
 29        android:label="VideoTagged" >
-29-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:11:9-36
+29-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:11:9-36
 30        <activity
-30-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:13:9-24:20
+30-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:13:9-24:20
 31            android:name="com.example.camera_app.MainActivity"
-31-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:14:13-41
+31-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:14:13-41
 32            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-32-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:17:13-163
+32-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:17:13-163
 33            android:hardwareAccelerated="true"
-33-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:18:13-47
+33-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:18:13-47
 34            android:launchMode="singleTop"
-34-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:15:13-43
+34-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:15:13-43
 35            android:theme="@style/LaunchTheme"
-35-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:16:13-47
+35-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:16:13-47
 36            android:windowSoftInputMode="adjustResize" >
-36-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:19:13-55
+36-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:19:13-55
 37            <intent-filter>
-37-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:20:13-23:29
+37-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:20:13-23:29
 38                <action android:name="android.intent.action.MAIN" />
-38-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:21:17-68
-38-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:21:25-66
+38-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:21:17-68
+38-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:21:25-66
 39
 40                <category android:name="android.intent.category.LAUNCHER" />
-40-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:22:17-76
-40-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:22:27-74
+40-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:22:17-76
+40-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:22:27-74
 41            </intent-filter>
 42        </activity>
 43        <activity android:name="com.amazonaws.mobileconnectors.cognitoauth.activities.CustomTabsRedirectActivity" >
-43-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:25:9-35:20
-43-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:26:13-108
+43-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:25:9-35:20
+43-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:26:13-108
 44            <intent-filter>
-44-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:27:13-34:29
+44-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:27:13-34:29
 45                <action android:name="android.intent.action.VIEW" />
-45-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:28:17-69
-45-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:28:25-66
+45-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:28:17-69
+45-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:28:25-66
 46
 47                <category android:name="android.intent.category.DEFAULT" />
-47-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:30:17-76
-47-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:30:27-73
+47-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:30:17-76
+47-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:30:27-73
 48                <category android:name="android.intent.category.BROWSABLE" />
-48-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:31:17-78
-48-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:31:27-75
+48-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:31:17-78
+48-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:31:27-75
 49
 50                <data android:scheme="cameraapp" />
-50-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:33:17-52
-50-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:33:23-49
+50-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:33:17-52
+50-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:33:23-49
 51            </intent-filter>
 52        </activity>
 53        <!--
@@ -99,28 +99,28 @@
 55             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
 56        -->
 57        <meta-data
-57-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:38:9-40:33
+57-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:38:9-40:33
 58            android:name="flutterEmbedding"
-58-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:39:13-44
+58-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:39:13-44
 59            android:value="2" />
-59-->/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:40:13-30
+59-->/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/android/app/src/main/AndroidManifest.xml:40:13-30
 60
 61        <provider
-61-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-16:20
+61-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-16:20
 62            android:name="de.esys.esysfluttershare.EsysFlutterShareFileProvider"
-62-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-81
+62-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-81
 63            android:authorities="com.flutter.cloud_behavior_capture.fileprovider.github.com/orgs/esysberlin/esys-flutter-share"
-63-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-110
+63-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-110
 64            android:exported="false"
-64-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-37
+64-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-37
 65            android:grantUriPermissions="true" >
-65-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-47
+65-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-47
 66            <meta-data
-66-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:72
+66-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:72
 67                android:name="android.support.FILE_PROVIDER_PATHS"
-67-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-67
+67-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-67
 68                android:resource="@xml/esys_flutter_share_filepaths" />
-68-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-69
+68-->[:esys_flutter_share] /Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/esys_flutter_share/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-69
 69        </provider>
 70
 71        <service

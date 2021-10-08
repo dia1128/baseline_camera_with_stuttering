@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml",
+            "outputFile": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml",
             "map": [
                 {
                     "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/9a6cdc76810db83cd80aa6c3be51abef/jetified-play-services-basement-16.0.1/res/values-az/values.xml",

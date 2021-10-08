@@ -1,18 +1,7 @@
-import 'package:amplify_flutter/amplify.dart';
-import 'package:amplify_storage_s3/amplify_storage_s3.dart';
-import 'package:camera_app/stuttering/passage.dart';
+
 import 'package:camera_app/stuttering/stuttering_home.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'dart:async';
-import 'dart:io';
-import 'package:path_provider/path_provider.dart';
 import 'dart:convert' show utf8;
-//import 'package:camera_app/stuttering/image_upload.dart';
-
-
-
-
 
 
 class Survey extends StatefulWidget {
@@ -125,3 +114,6 @@ class _SurveyState extends State<Survey> {
     );
   }
 }
+
+
+

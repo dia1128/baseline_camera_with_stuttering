@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_flutter/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml",
+            "outputFile": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_flutter/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml",
             "map": [
                 {
                     "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/dc4149fa3f1a0665f77912da5b35cac9/navigation-dynamic-features-fragment-2.3.2/res/values-hu/values-hu.xml",
@@ -74,7 +74,7 @@
             ]
         },
         {
-            "outputFile": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_flutter/intermediates/res/merged/debug/values-hu/values-hu.xml",
+            "outputFile": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_flutter/intermediates/res/merged/debug/values-hu/values-hu.xml",
             "map": [
                 {
                     "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/dc4149fa3f1a0665f77912da5b35cac9/navigation-dynamic-features-fragment-2.3.2/res/values-hu/values-hu.xml",

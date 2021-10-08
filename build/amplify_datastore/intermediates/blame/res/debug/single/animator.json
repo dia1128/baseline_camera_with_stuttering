@@ -1,54 +1,54 @@
 [
     {
-        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/mtrl_btn_state_list_anim.xml",
+        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/mtrl_btn_state_list_anim.xml",
         "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/mtrl_btn_state_list_anim.xml"
     },
     {
-        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/mtrl_fab_hide_motion_spec.xml",
-        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/mtrl_fab_hide_motion_spec.xml"
-    },
-    {
-        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/nav_default_pop_enter_anim.xml",
-        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/00b6b433404832d8eea0c23f9e3aa93c/navigation-ui-2.3.2/res/animator/nav_default_pop_enter_anim.xml"
-    },
-    {
-        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/mtrl_fab_transformation_sheet_expand_spec.xml",
-        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/mtrl_fab_transformation_sheet_expand_spec.xml"
-    },
-    {
-        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/mtrl_fab_transformation_sheet_collapse_spec.xml",
-        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/mtrl_fab_transformation_sheet_collapse_spec.xml"
-    },
-    {
-        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/nav_default_enter_anim.xml",
+        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/nav_default_enter_anim.xml",
         "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/00b6b433404832d8eea0c23f9e3aa93c/navigation-ui-2.3.2/res/animator/nav_default_enter_anim.xml"
     },
     {
-        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/mtrl_fab_show_motion_spec.xml",
-        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/mtrl_fab_show_motion_spec.xml"
+        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/mtrl_fab_hide_motion_spec.xml",
+        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/mtrl_fab_hide_motion_spec.xml"
     },
     {
-        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/design_fab_hide_motion_spec.xml",
-        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/design_fab_hide_motion_spec.xml"
+        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/nav_default_pop_enter_anim.xml",
+        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/00b6b433404832d8eea0c23f9e3aa93c/navigation-ui-2.3.2/res/animator/nav_default_pop_enter_anim.xml"
     },
     {
-        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/mtrl_chip_state_list_anim.xml",
-        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/mtrl_chip_state_list_anim.xml"
+        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/mtrl_fab_transformation_sheet_collapse_spec.xml",
+        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/mtrl_fab_transformation_sheet_collapse_spec.xml"
     },
     {
-        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/mtrl_btn_unelevated_state_list_anim.xml",
-        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/mtrl_btn_unelevated_state_list_anim.xml"
+        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/nav_default_exit_anim.xml",
+        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/00b6b433404832d8eea0c23f9e3aa93c/navigation-ui-2.3.2/res/animator/nav_default_exit_anim.xml"
     },
     {
-        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/design_fab_show_motion_spec.xml",
+        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/design_fab_show_motion_spec.xml",
         "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/design_fab_show_motion_spec.xml"
     },
     {
-        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/nav_default_pop_exit_anim.xml",
+        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/nav_default_pop_exit_anim.xml",
         "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/00b6b433404832d8eea0c23f9e3aa93c/navigation-ui-2.3.2/res/animator/nav_default_pop_exit_anim.xml"
     },
     {
-        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_backup/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/nav_default_exit_anim.xml",
-        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/00b6b433404832d8eea0c23f9e3aa93c/navigation-ui-2.3.2/res/animator/nav_default_exit_anim.xml"
+        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/mtrl_fab_transformation_sheet_expand_spec.xml",
+        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/mtrl_fab_transformation_sheet_expand_spec.xml"
+    },
+    {
+        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/design_fab_hide_motion_spec.xml",
+        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/design_fab_hide_motion_spec.xml"
+    },
+    {
+        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/mtrl_btn_unelevated_state_list_anim.xml",
+        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/mtrl_btn_unelevated_state_list_anim.xml"
+    },
+    {
+        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/mtrl_fab_show_motion_spec.xml",
+        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/mtrl_fab_show_motion_spec.xml"
+    },
+    {
+        "merged": "/Users/sadiaafrin/Desktop/Development/baseline_github/baseline_camera_with_stuttering/build/amplify_datastore/intermediates/res/merged/debug/animator/mtrl_chip_state_list_anim.xml",
+        "source": "/Users/sadiaafrin/.gradle/caches/transforms-2/files-2.1/db2388f0fe5e05a7a168e5a9c11e912f/material-1.0.0/res/animator/mtrl_chip_state_list_anim.xml"
     }
 ]
