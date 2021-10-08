@@ -36,7 +36,6 @@ class _ReadPassageState extends State<ReadPassage> {
   String sessionText = "A trip to Israel should be a rite of passage for every Christian. There is no substitute for walking the land where Jesus walked and traversing the paths of the patriarchs, kings, prophets, and the first disciples. The origins of both ancient Biblical faith and of a present-day nation, rich with culture, diversity, beauty, and challenges, are in Israel. The land and the people of Israel have a story to tell. By coming to Israel, you make Israel’s story part of your own.";
   CameraController controller;
   String filePath;
-  CameraViewBuild cameraview = new CameraViewBuild();
   BooleanWrap isFileFinishedUploading;
   bool enableAudio = true;
   String uploadMessage;
@@ -132,6 +131,7 @@ class _ReadPassageState extends State<ReadPassage> {
               controller.value.isInitialized &&
               controller.value.isRecordingVideo
               ? onStopPressed
+
               : null,
         )
 
@@ -292,25 +292,26 @@ class _ReadPassageState extends State<ReadPassage> {
   Future<void> onStopPressed() async {
     enableVideo =false;
     await controller.stopVideoRecording();
+
     setState(() {});
     String date = DateTime.now().toIso8601String().substring(0, 19);
     print("onStopPressed()");
-    //
-    // try {
-    //   final result = await Amplify.Storage.uploadFile(
-    //
-    //     local: File(filePath),
-    //     key: '${widget.deviceID}/Stuttering/${widget.deviceID}_' + '$date.mp4',
-    //   );
-    //   print('Successfully uploaded file: ${result.key}');
-    // } on StorageException catch (e) {
-    //   print('Error uploading file: $e');
-    // }
+
+    try {
+      final result = await Amplify.Storage.uploadFile(
+
+        local: File(filePath),
+        key: '${widget.deviceID}/Stuttering/${widget.deviceID}_' + '$date.mp4',
+      );
+      print('Successfully uploaded file: ${result.key}');
+    } on StorageException catch (e) {
+      print('Error uploading file: $e');
+    }
     var data = await downloadProtected() as List;
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context,) => Survey(questions: data.toList()), //list is forwarded to the next screen
+          builder: (context,) => Survey(questions: data.toList(), id: widget.deviceID.toString()), //list is forwarded to the next screen
         ));
   }
 
@@ -322,7 +323,8 @@ class _ReadPassageState extends State<ReadPassage> {
   Future downloadProtected() async {
     // Create a file to store downloaded contents
     final documentsDir = await getApplicationDocumentsDirectory();
-    final filepath = documentsDir.path + '/example.csv';
+    //final filepath = documentsDir.path + '/example.csv';
+    final filepath = documentsDir.path + '/example_survey.csv';
     final file = File(filepath);
     List fields = [];
 

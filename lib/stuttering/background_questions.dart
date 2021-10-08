@@ -16,53 +16,66 @@ class _SurveyNewState extends State<SurveyNew> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('GeeksforGeeks'),
-          backgroundColor: Colors.green,
-        ),
-        body: Center(
-          child: Column(
+    // return  Scaffold(
+    //     appBar: AppBar(
+    //       title: Text('GeeksforGeeks'),
+    //       backgroundColor: Colors.green,
+    //     ),
+    //     body: Center(
+    //       child: Column(
+    //
+    //         mainAxisAlignment: MainAxisAlignment.center,
+    //         children: <Widget>[
+    //           Expanded(
+    //             child: Container(
+    //               width: 250,
+    //               child: Text("Age")
+    //             )
+    //           ),
+    //           Expanded(
+    //             flex:1,
+    //       child: Container(
+    //         width: 250,
+    //         child: TextField(
+    //           decoration: InputDecoration(
+    //             hintText: 'Enter Something',
+    //             focusColor: Colors.green,
+    //           ),
+    //           controller: fieldText,
+    //         ),
+    //       ),
+    //           ),
+    //           Expanded(
+    //             flex: 1,
+    //                 child: RaisedButton(
+    //             onPressed: clearText,
+    //             color: Colors.green,
+    //             child: Text('Clear'),
+    //             textColor: Colors.white,
+    //           ),
+    //           )
+    //
+    //
+    //
+    //         ],
+    //       ),
+    //     ),
+    //   );
 
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Expanded(
-                child: Container(
-                  width: 250,
-                  child: Text("Age")
-                )
-              ),
-              Expanded(
-                flex:1,
-          child: Container(
-            width: 250,
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'Enter Something',
-                focusColor: Colors.green,
-              ),
-              controller: fieldText,
-            ),
-          ),
-              ),
-              Expanded(
-                flex: 1,
-                    child: RaisedButton(
-                onPressed: clearText,
-                color: Colors.green,
-                child: Text('Clear'),
-                textColor: Colors.white,
-              ),
-              )
+    // return SafeArea(
+    //   child: Container (
+    //     child: Column(
+    //       crossAxisAlignment: CrossAxisAlignment.start,
+    //       mainAxisAlignment: MainAxisAlignment.center,
+    //       children: [
+    //         Container(padding: const EdgeInsets.all(10.0),
+    //         //child: progress <1.0? LinearProgressIndicator(value:progress): Container())
+    //       ];
+    //     )
+    //   )
 
 
 
-            ],
-          ),
-        ),
-      ),
-    );
   }
 }
 
