@@ -83,93 +83,93 @@ class _SurveyState extends State<Survey> {
     //cameraview widget
 
     if(okay == true)
-      {
-        return Scaffold(
+    {
+      return Scaffold(
 
-          body: Container(
-            decoration: BoxDecoration(
+        body: Container(
+          decoration: BoxDecoration(
 
-                border: Border.all(color: enableVideo == true ? Colors.red: Colors.white, width:4),
-                color: Colors.white
+              border: Border.all(color: enableVideo == true ? Colors.red: Colors.white, width:4),
+              color: Colors.white
 
-            ),
-            child: Column(
+          ),
+          child: Column(
 
-              children: <Widget>[
-                Expanded(
-                    flex: 4,
+            children: <Widget>[
+              Expanded(
+                  flex: 4,
 
-                    child: Container(
-                        padding: const EdgeInsets.only(top:50, left: 25, right: 25),
-                        height: 100,
-                        child: Align(
+                  child: Container(
+                    padding: const EdgeInsets.only(top:50, left: 25, right: 25),
+                    height: 100,
+                    child: Align(
 
-                          child: SingleChildScrollView(
-                            scrollDirection: Axis.vertical,
-                            child: Text(
-                              widget.questions[count][1].toString(),
-                              style: TextStyle(fontSize: 25, color: Colors.blue),
-                            ),
-
-                          ),
-
-
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.vertical,
+                        child: Text(
+                          widget.questions[count][1].toString(),
+                          style: TextStyle(fontSize: 25, color: Colors.blue),
                         ),
 
-                    )
-                ),
-
-                Expanded(
-                  flex: 1,
-                  child: Container(
-                    margin:  EdgeInsets.only(
-                        bottom: MediaQuery.of(context).size.width * .3),
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        //foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
                       ),
-                      onPressed: () async {
-                        print("count" + count.toString());
-                        print("length"+ widget.questions.length.toString());
-                        print(widget.questions[count].toString());
-                        if(count< widget.questions.length-1)
-                        {
 
-                          setState(() {
-                            count = count + 1;
-                          });
-
-                        }
-                        else {
-                          onStopPressed();
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => HomeNavigation()),);
-                        }
-
-
-                      },
-                      child: Text("Next Question"),
 
                     ),
+
+                  )
+              ),
+
+              Expanded(
+                flex: 1,
+                child: Container(
+                  margin:  EdgeInsets.only(
+                      bottom: MediaQuery.of(context).size.width * .3),
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      //foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+                    ),
+                    onPressed: () async {
+                      print("count" + count.toString());
+                      print("length"+ widget.questions.length.toString());
+                      print(widget.questions[count].toString());
+                      if(count< widget.questions.length-1)
+                      {
+
+                        setState(() {
+                          count = count + 1;
+                        });
+
+                      }
+                      else {
+                        onStopPressed();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomeNavigation()),);
+                      }
+
+
+                    },
+                    child: Text("Next Question"),
+
                   ),
-
-
                 ),
 
-              ],
-            ),
-          ),
-        );
-      }
-   else
-     {
-       return Scaffold(
-         body: Column(
 
-         )
-       );
-     }
+              ),
+
+            ],
+          ),
+        ),
+      );
+    }
+    else
+    {
+      return Scaffold(
+          body: Column(
+
+          )
+      );
+    }
 
   }
 
@@ -182,7 +182,7 @@ class _SurveyState extends State<Survey> {
     String date = DateTime.now().toIso8601String();
     filePath = '$dirPath/$date.mp4';
 
-   print("Start recording in survey");
+    print("Start recording in survey");
     await controller.startVideoRecording(filePath);
     setState(() {});
   }
@@ -204,16 +204,16 @@ class _SurveyState extends State<Survey> {
     String date = DateTime.now().toIso8601String().substring(0, 19);
     print("Recording stopped in Survey");
 
-    try {
-      final result = await Amplify.Storage.uploadFile(
-
-        local: File(filePath),
-        key: '${widget.id}/Stuttering/${widget.id}_' + '$date.mp4',
-      );
-      print('Successfully uploaded file: ${result.key}');
-    } on StorageException catch (e) {
-      print('Error uploading file: $e');
-    }
+    // try {
+    //   final result = await Amplify.Storage.uploadFile(
+    //
+    //     local: File(filePath),
+    //     key: '${widget.id}/Stuttering/${widget.id}_' + '$date.mp4',
+    //   );
+    //   print('Successfully uploaded file: ${result.key}');
+    // } on StorageException catch (e) {
+    //   print('Error uploading file: $e');
+    // }
     Navigator.push(
         context,
         MaterialPageRoute(
@@ -255,5 +255,3 @@ class _SurveyState extends State<Survey> {
 
 
 }
-
-

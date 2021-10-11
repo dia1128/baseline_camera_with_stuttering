@@ -1,4 +1,3 @@
-
 import 'dart:convert' show utf8;
 import 'dart:async';
 import 'dart:io';
@@ -31,50 +30,52 @@ class HomeNavigation extends StatelessWidget {
             children: [
 
               Expanded(
-                  flex: 1,
-                      child: Container(
-                        margin: const EdgeInsets.only(top:200,bottom:100),
-                        child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(primary: Colors.teal),
-                            onPressed: () async{
+                flex: 1,
+                child: Container(
+                  margin: const EdgeInsets.only(top:200,bottom:100),
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(primary: Colors.teal),
+                      onPressed: () async{
 
-                              String id;
-                              bool check;
+                        String id;
+                        bool check;
 
-                                getID().then((value){
-                                  id = value.toString(); //This is how we store a future returned value. That is the device ID here.
-                                  print("Device ID: " + id.toString());
+                        getID().then((value){
+                          id = value.toString(); //This is how we store a future returned value. That is the device ID here.
+                          print("Device ID: " + id.toString());
 
-                                });
-                                print(getID.toString());
-                              getURL().then((directory){ //get S3 directory named on device name
-                                print("Existing Devices:" + directory.toString());
-                                check = directory.contains(id);
-                                print("Check " + check.toString());
+                        });
 
-                                ///if device id already exists as a directory name in s3 we users will go to passage reading screen directly
-                                ///Otherwise a background questioner will prompt in a new new screen
+                        var data = await downloadPassages() as List;
+                        //print(data.length());
 
-                                if(directory.contains(id) == true){
-                                  Navigator.push(
+                        getURL().then((directory){ //get S3 directory named on device name
+                          print("Existing Devices:" + directory.toString());
+                          check = directory.contains(id);
+                          print("Check " + check.toString());
 
-                                      context,
-                                      MaterialPageRoute(builder: (context) => ReadPassage(deviceID: id,))
-                                  );
-                                }
-                                else{
-                                  Navigator.push(
+                          ///if device id already exists as a directory name in s3 we users will go to passage reading screen directly
+                          ///Otherwise a background questioner will prompt in a new new screen
+                          if(directory.contains(id) == true){
+                            Navigator.push(
 
-                                      context,
-                                      MaterialPageRoute(builder: (context) => SurveyNew ())
-                                  );
-                                }
-                              });
-                            },
-                              child: Text("Read Passage")
+                                context,
+                                MaterialPageRoute(builder: (context) => ReadPassage(deviceID: id, passageContent: data.toList()))
+                            );
+                          }
+                          else{
+                            Navigator.push(
 
-                    ),
-                      ),
+                                context,
+                                MaterialPageRoute(builder: (context) => SurveyNew ())
+                            );
+                          }
+                        });
+                      },
+                      child: Text("Read Passage")
+
+                  ),
+                ),
 
               ),
               Expanded(
@@ -86,7 +87,7 @@ class HomeNavigation extends StatelessWidget {
                       onPressed: () {
 
                       },
-                    child: Text("Upload Image")
+                      child: Text("Upload Image")
 
                   ),
                 ),
@@ -98,7 +99,6 @@ class HomeNavigation extends StatelessWidget {
   }
   ///Collecting the folder name
   ///All unique name with one extra file of questions which doesn't matter
-
   static Future<List<String>> getURL() async {
     List<String> objects = [];
     try {
@@ -109,8 +109,8 @@ class HomeNavigation extends StatelessWidget {
 
         folder = element.key.toString().split("/").first;
         if(objects.contains(folder) == false)
-           objects.add(folder.toString());
-    });
+          objects.add(folder.toString());
+      });
 
       return objects;
     } on StorageException catch (e) {
@@ -124,6 +124,44 @@ class HomeNavigation extends StatelessWidget {
     String deviceId = await PlatformDeviceId.getDeviceId;
 
     return deviceId.toString();
+
+  }
+  ///Download files from aws, create a temporary csv file
+  ///create a list from the file and return the list
+  Future downloadPassages() async {
+    // Create a file to store downloaded contents
+    final documentsDir = await getApplicationDocumentsDirectory();
+    //final filepath = documentsDir.path + '/example.csv';
+    final filepath = documentsDir.path + '/passages.csv';
+    final file = File(filepath);
+    List fields = [];
+
+
+    // Set access level and Cognito Identity ID.
+    // Note: `targetIdentityId` is only needed when downloading
+    // protected files of a user other than the one currently
+    // logged in.
+    final downloadOptions = S3DownloadFileOptions(
+      accessLevel: StorageAccessLevel.guest,
+    );
+
+    // Download gues file and read contents
+    try {
+      await Amplify.Storage.downloadFile(
+        key: 'passages.csv',
+        local: file,
+        options: downloadOptions,
+      );
+
+      final input = file.openRead();
+      fields = await input.transform(utf8.decoder).transform(new CsvToListConverter()).toList();
+
+      //print("List"+ fields.toString());
+      return fields;
+
+    } on StorageException catch (e) {
+      print('Error downloading protected file: $e');
+    }
 
   }
 }

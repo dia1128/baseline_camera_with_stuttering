@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:io';
-
+import 'dart:math';
 import 'package:amplify_flutter/amplify.dart';
 import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 import 'package:camera/camera.dart';
@@ -15,7 +15,8 @@ import 'dart:convert' show utf8;
 import 'package:csv/csv.dart';
 
 class ReadPassage extends StatefulWidget {
-  ReadPassage({this.title,this.deviceID});
+  final passageContent;
+  ReadPassage({this.title,this.deviceID, this.passageContent});
 
   String title = "Read Passage";
   String deviceID;
@@ -33,14 +34,17 @@ class ReadPassage extends StatefulWidget {
 
 class _ReadPassageState extends State<ReadPassage> {
 
-  String sessionText = "A trip to Israel should be a rite of passage for every Christian. There is no substitute for walking the land where Jesus walked and traversing the paths of the patriarchs, kings, prophets, and the first disciples. The origins of both ancient Biblical faith and of a present-day nation, rich with culture, diversity, beauty, and challenges, are in Israel. The land and the people of Israel have a story to tell. By coming to Israel, you make Israel’s story part of your own.";
+  //String sessionText = "A trip to Israel should be a rite of passage for every Christian. There is no substitute for walking the land where Jesus walked and traversing the paths of the patriarchs, kings, prophets, and the first disciples. The origins of both ancient Biblical faith and of a present-day nation, rich with culture, diversity, beauty, and challenges, are in Israel. The land and the people of Israel have a story to tell. By coming to Israel, you make Israel’s story part of your own.";
   CameraController controller;
   String filePath;
   BooleanWrap isFileFinishedUploading;
   bool enableAudio = true;
   String uploadMessage;
   bool enableVideo = false;
-
+  int count = 0;
+  final _random = Random();
+  final readPassages = [];
+  int rand = 0;
 
 
   _ReadPassageState() {
@@ -60,6 +64,8 @@ class _ReadPassageState extends State<ReadPassage> {
       print(e.toString());
     }
   }
+
+
 
 
   // checks internet
@@ -143,7 +149,6 @@ class _ReadPassageState extends State<ReadPassage> {
   Widget build(BuildContext context) {
     //cameraview widget
 
-
     return Scaffold(
       //body: Padding(
       //padding: const EdgeInsets.only(top: 40, bottom: 10),
@@ -168,13 +173,24 @@ class _ReadPassageState extends State<ReadPassage> {
                 //color: Colors.white,
                 child: SingleChildScrollView(
                   scrollDirection: Axis.vertical,
-                  child: Container(
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                    child: Text(
-                      sessionText.toString(),
-                      style: TextStyle(fontSize: 20),
-                      textAlign: TextAlign.left,
-                    ),
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Text(
+                            widget.passageContent[rand][1].toString() ,
+                            style: TextStyle(fontSize: 20),
+                            textAlign: TextAlign.left
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                        child: Text(
+                            widget.passageContent[rand][2].toString() ,
+                          style: TextStyle(fontSize: 20),
+                          textAlign: TextAlign.left
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               )
@@ -182,20 +198,7 @@ class _ReadPassageState extends State<ReadPassage> {
           Center(
             child: Padding(
                 padding: const EdgeInsets.only(bottom: 20),
-                // child: ElevatedButton(
-                //   style: ButtonStyle(
-                //     //foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-                //   ),
-                //   onPressed: () {
-                //     if (!controller.value.isRecordingVideo)
-                //       onStartPressed();
-                //     else
-                //       onStopPressed();
-                //   },
-                //   child: controller.value.isRecordingVideo ?
-                //   Text("stop recording") : Text('Start Session'),
-                //   //child: Text("Recording")
-                // ),
+
                 child: captureControlRowWidget()
             ),
           )
@@ -297,16 +300,16 @@ class _ReadPassageState extends State<ReadPassage> {
     String date = DateTime.now().toIso8601String().substring(0, 19);
     print("onStopPressed()");
 
-    try {
-      final result = await Amplify.Storage.uploadFile(
-
-        local: File(filePath),
-        key: '${widget.deviceID}/Stuttering/${widget.deviceID}_' + '$date.mp4',
-      );
-      print('Successfully uploaded file: ${result.key}');
-    } on StorageException catch (e) {
-      print('Error uploading file: $e');
-    }
+    // try {
+    //   final result = await Amplify.Storage.uploadFile(
+    //
+    //     local: File(filePath),
+    //     key: '${widget.deviceID}/Stuttering/${widget.deviceID}_' + '$date.mp4',
+    //   );
+    //   print('Successfully uploaded file: ${result.key}');
+    // } on StorageException catch (e) {
+    //   print('Error uploading file: $e');
+    // }
     var data = await downloadProtected() as List;
     Navigator.push(
         context,
@@ -319,7 +322,6 @@ class _ReadPassageState extends State<ReadPassage> {
 
   ///Download files from aws, create a temporary csv file
   ///create a list from the file and return the list
-
   Future downloadProtected() async {
     // Create a file to store downloaded contents
     final documentsDir = await getApplicationDocumentsDirectory();
@@ -337,7 +339,7 @@ class _ReadPassageState extends State<ReadPassage> {
       accessLevel: StorageAccessLevel.guest,
     );
 
-    // Download gues file and read contents
+    //Download gues file and read contents
     try {
       await Amplify.Storage.downloadFile(
         key: 'questions.csv',
@@ -357,9 +359,18 @@ class _ReadPassageState extends State<ReadPassage> {
 
   }
 
+  int nextInt(int min, int max) => min + _random.nextInt((max + 1) - min);
+
+
+  @override
+  void initState() {
+    super.initState();
+    rand = nextInt(1, nextInt(1,widget.passageContent.length));
+
+  }
+
 
 
 
 }
-
 
